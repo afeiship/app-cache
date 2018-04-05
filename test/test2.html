@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.js?features=Array.prototype.indexOf,Array.prototype.filter,Object.keys"></script>
+  <![endif]-->
+</head>
+<body>
+    <button type="button" class="ant-btn ant-btn-primary"><span>Primary</span></button>
+  <nav>
+    <ul>
+      <li><a href="test1.html">test1.html page</a></li>
+      <li><a href="test2.html">test2.html page</a></li>
+      <li><a href="test3.html">test3.html page</a></li>
+    </ul>
+  </nav>
+  <script src="./dist/app-cache.js"></script>
+  <script>
+    AppCache.load([
+      '//cdn.bootcss.com/zepto/1.0rc1/zepto.min.js',
+      '//cdn.bootcss.com/q.js/1.4.1/q.min.js',
+      '//cdn.bootcss.com/antd/3.1.6/antd.min.css'
+    ],{
+      success:function(resp){
+        console.log($(document.body),'page2 loaded!');
+      }
+    });
+  </script>
+</body>
+</html>

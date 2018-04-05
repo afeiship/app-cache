@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+	<!-- Test and expectation libraries -->
+	<link rel="stylesheet" href="./libs/mocha.css" />
+	<script src="./libs/mocha.js"></script>
+	<script src="./libs/chai.js"></script>
+  <script src="./libs/proclaim.js"></script>
+  <script src="/app-cache.js"></script>
+
+	<!-- Initalise Mocha -->
+  <script>mocha.setup('bdd');</script>
+</head>
+<body>
+
+    <div id="mocha"></div>
+    <script src="./cases/api-inject-script.test.js"></script>
+    <script src="./cases/api-inject-style.test.js"></script>
+    <script src="./cases/api-store.test.js"></script>
+    <script src="./cases/api-manifest.test.js"></script>
+    <script> mocha.run(); </script>
+
+</body>
+</html>

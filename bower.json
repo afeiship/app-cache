@@ -1,0 +1,26 @@
+{
+  "name": "app-cache",
+  "description": "An app scripts cache solution based on localStorage/sessionStorage.",
+  "main": "dist/app-cache.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/app-cache",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "gulp",
+    "gulpfile.js"
+  ]
+}
