@@ -12,6 +12,7 @@
   var JAVASCRIPT = 'javascript';
   var INJECT_STYLE = 'injectStyle';
   var INJECT_SCRIPT = 'injectScript';
+  var DEFAULT_OPTIONS = { success: function(){} };
 
   //AppCache class:
   function AppCache() {
@@ -76,7 +77,7 @@
     },
     load: function (inFiles, inOptions) {
       this._loadFiles = inFiles;
-      this._loadOptions = inOptions || {};
+      this._loadOptions = inOptions || DEFAULT_OPTIONS;
       // sync && diff files:
       this.syncManifest(inFiles);
       this.loadQueue(0);

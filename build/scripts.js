@@ -9,7 +9,7 @@
   });
 
   var scriptFiles = [
-    'src/app-cache.js',
+    'src/index.js',
     'src/load-from-xhr.js',
     'src/load-from-cache.js',
     'src/load-text.js',
