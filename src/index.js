@@ -17,7 +17,7 @@
   }
 
   // static method:
-  AppCache.VERSION = '0.0.2';
+  AppCache.VERSION = '0.0.3';
   AppCache.PREFIX = '__app_cache__';
   AppCache.NOOP = function () {
   };
@@ -32,7 +32,7 @@
   };
 
   AppCache.diff = function (inArray1, inArray2) {
-    return inArray2.filter(function (i) {
+    return inArray1.filter(function (i) {
       return inArray2.indexOf(i) === -1;
     });
   };
