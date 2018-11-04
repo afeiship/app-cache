@@ -1,5 +1,5 @@
 /*
- * app-cache 0.0.2
+ * app-cache 1.0.1
  * An app scripts cache solution based on localStorage.
  * https://github.com/afeiship/app-cache
  *
@@ -26,7 +26,7 @@
   }
 
   // static method:
-  AppCache.VERSION = '0.0.3';
+  AppCache.VERSION = '1.0.1';
   AppCache.PREFIX = '__app_cache__';
   AppCache.NOOP = function () {
   };

@@ -1,6 +1,6 @@
 {
   "name": "app-cache",
-  "version": "0.0.2",
+  "version": "1.0.1",
   "description": "An app scripts cache solution based on localStorage.",
   "homepage": "https://github.com/afeiship/app-cache",
   "author": {
@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "gulp",
+    "release": "gulp bump-json && npm run build && gulp bump-js",
     "start": "node express.js"
   },
   "main": "dist/app-cache.js",
@@ -20,9 +21,12 @@
     "gulp-banner": "^0.1.3",
     "gulp-bump": "^3.0.0",
     "gulp-concat": "^2.6.0",
+    "gulp-debug": "^4.0.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^2.3.2",
+    "gulp-sequence": "^1.0.0",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^2.1.2",
     "yargs": "^4.7.1"

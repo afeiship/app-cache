@@ -17,7 +17,7 @@
   }
 
   // static method:
-  AppCache.VERSION = '0.0.3';
+  AppCache.VERSION = '__VERSION__';
   AppCache.PREFIX = '__app_cache__';
   AppCache.NOOP = function () {
   };
