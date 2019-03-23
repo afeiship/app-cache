@@ -37,7 +37,7 @@
 ## import with script:
 ```html
 <!-- production -->
-<script type="text/javascript" src="http://org2gwhgm.bkt.clouddn.com/app-cache.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/afeiship/app-cache@1.0.1/dist/app-cache.min.js"></script>
 ```
 ## usage:
 ```js
