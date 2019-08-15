@@ -18,10 +18,6 @@
 + https://www.cnblogs.com/snandy/p/4867731.html
 + https://api.qunitjs.com/assert/async
 
-## qiniu CDN(dev/prd)
-+ http://org2gwhgm.bkt.clouddn.com/app-cache.js
-+ http://org2gwhgm.bkt.clouddn.com/app-cache.min.js
-
 ## github path:
 + https://afeiship.github.io/app-cache/dist/app-cache.js
 + https://afeiship.github.io/app-cache/dist/app-cache.min.js
