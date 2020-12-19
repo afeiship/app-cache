@@ -25,6 +25,7 @@ AppCache.load([
 ## resources
 - https://www.cnblogs.com/snandy/p/4867731.html
 - https://api.qunitjs.com/assert/async
+- https://addyosmani.com/basket.js/
 
 
 ## lt ie9 polyfill
