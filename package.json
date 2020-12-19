@@ -1,6 +1,6 @@
 {
   "name": "@jswork/app-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An app scripts cache solution based on localStorage.",
   "homepage": "https://github.com/afeiship/app-cache",
   "author": {
