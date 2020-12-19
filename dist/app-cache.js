@@ -1,9 +1,9 @@
 /*
- * app-cache 1.0.1
+ * @jswork/app-cache 1.0.0
  * An app scripts cache solution based on localStorage.
  * https://github.com/afeiship/app-cache
  *
- * Copyright 2018, afei - 1290657123@qq.com
+ * Copyright 2020, afei - 1290657123@qq.com
  * Released under the MIT license.
 */
 
@@ -26,7 +26,7 @@
   }
 
   // static method:
-  AppCache.VERSION = '1.0.1';
+  AppCache.VERSION = '__VERSION__';
   AppCache.PREFIX = '__app_cache__';
   AppCache.NOOP = function () {
   };
@@ -89,7 +89,6 @@
 }());
 
 (function (AppCache) {
-
   var CONTENT_TYPE = 'content-type';
   var GET = 'GET';
 
@@ -98,8 +97,8 @@
     xhr.open(GET, inUrl);
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
-        if (xhr.status === 200 || ( xhr.status === 0 && xhr.responseText )) {
-          inSuccess({content: xhr.responseText, type: xhr.getResponseHeader(CONTENT_TYPE)});
+        if (xhr.status === 200 || (xhr.status === 0 && xhr.responseText)) {
+          inSuccess({ content: xhr.responseText, type: xhr.getResponseHeader(CONTENT_TYPE) });
         } else {
           inError(xhr.statusText);
         }
@@ -115,15 +114,12 @@
     }, inTimeout);
     xhr.send();
   };
-
-}(AppCache));
+})(AppCache);
 
 (function (AppCache) {
-
   var JS = 'js';
   var APP_JS = 'application/javascript';
   var TEXT_CSS = 'text/css';
-
 
   AppCache.prototype.loadFromCache = function (inUrl, inSuccess, inError, inTimeout) {
     try {
@@ -131,16 +127,14 @@
       var url = index === -1 ? inUrl : inUrl.slice(0, index);
       var stored = this.getStore(inUrl);
       var type = url.slice(-2) === JS ? APP_JS : TEXT_CSS;
-      inSuccess({content: stored, type: type});
+      inSuccess({ content: stored, type: type });
     } catch (err) {
       inError(err);
     }
   };
-
-}(AppCache));
+})(AppCache);
 
 (function (AppCache) {
-
   AppCache.prototype.hasLoad = function (inUrl) {
     var manifest = this.getManifest();
     return manifest.files[inUrl];
@@ -150,28 +144,26 @@
     var timeout = inOptions.timeout || 30 * 1000;
     var success = inOptions.success || AppCache.NOOP;
     var error = inOptions.error || AppCache.NOOP;
-    this.hasLoad(inUrl) ? this.loadFromCache(inUrl, success, error, timeout) : this.loadFromXHR(inUrl, success, error, timeout);
+    this.hasLoad(inUrl)
+      ? this.loadFromCache(inUrl, success, error, timeout)
+      : this.loadFromXHR(inUrl, success, error, timeout);
   };
-
-}(AppCache));
+})(AppCache);
 
 (function (AppCache) {
-
   var head = document.head || document.getElementsByTagName('head')[0];
 
-  AppCache.injectScript = AppCache.prototype.injectScript = function(inText){
+  AppCache.injectScript = AppCache.prototype.injectScript = function (inText) {
     var script = document.createElement('script');
     script.defer = true;
     // Have to use .text, since we support IE8,
     // which won't allow appending to a script
-    script.text =inText;
-    head.appendChild( script );
+    script.text = inText;
+    head.appendChild(script);
   };
-
-}(AppCache));
+})(AppCache);
 
 (function (AppCache) {
-
   var head = document.head || document.getElementsByTagName('head')[0];
   var STYLE = 'style';
   var TEXT_CSS = 'text/css';
@@ -180,17 +172,15 @@
     var style = document.createElement(STYLE);
     style.type = TEXT_CSS;
     if (style.styleSheet) {
-      style.styleSheet.cssText = inText
+      style.styleSheet.cssText = inText;
     } else {
       style.appendChild(document.createTextNode(inText));
     }
     head.appendChild(style);
   };
-
-}(AppCache));
+})(AppCache);
 
 (function (AppCache) {
-
   var appCacheProto = AppCache.prototype;
   var ENGINE = window.localStorage;
 
@@ -229,12 +219,9 @@
       }
     });
   };
-
-
-}(AppCache));
+})(AppCache);
 
 (function (AppCache) {
-
   var appCacheProto = AppCache.prototype;
 
   //symbol string:
@@ -247,7 +234,6 @@
       files: {}
     });
   };
-
 
   appCacheProto.syncManifest = function (inFiles) {
     var files = this._manifest.files;
@@ -284,5 +270,4 @@
   appCacheProto.setManifest = function (inValue) {
     this.setStore(MANIFEST, inValue);
   };
-
-}(AppCache));
+})(AppCache);

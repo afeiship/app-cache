@@ -13591,7 +13591,7 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],83:[function(require,module,exports){
-module.exports = require('./lib/_stream_duplex.js');
+module.exports = require('./lib/_stream_duplex.js.js');
 
 },{"./lib/_stream_duplex.js":84}],84:[function(require,module,exports){
 // a duplex stream is just a stream that is both readable and writable.
@@ -15434,19 +15434,19 @@ module.exports = require('events').EventEmitter;
 module.exports = require('./readable').PassThrough
 
 },{"./readable":92}],92:[function(require,module,exports){
-exports = module.exports = require('./lib/_stream_readable.js');
+exports = module.exports = require('./lib/_stream_readable.js.js');
 exports.Stream = exports;
 exports.Readable = exports;
-exports.Writable = require('./lib/_stream_writable.js');
-exports.Duplex = require('./lib/_stream_duplex.js');
-exports.Transform = require('./lib/_stream_transform.js');
-exports.PassThrough = require('./lib/_stream_passthrough.js');
+exports.Writable = require('./lib/_stream_writable.js.js');
+exports.Duplex = require('./lib/_stream_duplex.js.js');
+exports.Transform = require('./lib/_stream_transform.js.js');
+exports.PassThrough = require('./lib/_stream_passthrough.js.js');
 
 },{"./lib/_stream_duplex.js":84,"./lib/_stream_passthrough.js":85,"./lib/_stream_readable.js":86,"./lib/_stream_transform.js":87,"./lib/_stream_writable.js":88}],93:[function(require,module,exports){
 module.exports = require('./readable').Transform
 
 },{"./readable":92}],94:[function(require,module,exports){
-module.exports = require('./lib/_stream_writable.js');
+module.exports = require('./lib/_stream_writable.js.js');
 
 },{"./lib/_stream_writable.js":88}],95:[function(require,module,exports){
 module.exports = require('buffer')

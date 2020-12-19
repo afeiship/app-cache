@@ -16,6 +16,6 @@
   });
 
 
-  gulp.task('default',['build']);
+  gulp.task('default', gulp.series(['clean', 'scripts']));
 
 }());

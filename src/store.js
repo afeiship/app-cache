@@ -1,5 +1,4 @@
 (function (AppCache) {
-
   var appCacheProto = AppCache.prototype;
   var ENGINE = window.localStorage;
 
@@ -38,6 +37,4 @@
       }
     });
   };
-
-
-}(AppCache));
+})(AppCache);

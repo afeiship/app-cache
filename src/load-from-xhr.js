@@ -1,5 +1,4 @@
 (function (AppCache) {
-
   var CONTENT_TYPE = 'content-type';
   var GET = 'GET';
 
@@ -8,8 +7,8 @@
     xhr.open(GET, inUrl);
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
-        if (xhr.status === 200 || ( xhr.status === 0 && xhr.responseText )) {
-          inSuccess({content: xhr.responseText, type: xhr.getResponseHeader(CONTENT_TYPE)});
+        if (xhr.status === 200 || (xhr.status === 0 && xhr.responseText)) {
+          inSuccess({ content: xhr.responseText, type: xhr.getResponseHeader(CONTENT_TYPE) });
         } else {
           inError(xhr.statusText);
         }
@@ -25,5 +24,4 @@
     }, inTimeout);
     xhr.send();
   };
-
-}(AppCache));
+})(AppCache);

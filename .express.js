@@ -3,7 +3,7 @@ const app = express();
 const portNumber = 3000;
 
 app.use(express.static('dist'));
-app.use(express.static('test'));
+app.use(express.static('__tests__'));
 
 app.listen(portNumber, () => {
   console.log(`Express web server started: http://localhost:${portNumber}`);

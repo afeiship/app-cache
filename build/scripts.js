@@ -3,7 +3,6 @@
   'use strict';
 
   var gulp = require('gulp');
-  var config = require('./config');
   var $ = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*', 'del']
   });
@@ -26,7 +25,7 @@
     ' * <%= pkg.description %>\n' +
     ' * <%= pkg.homepage %>\n' +
     ' *\n' +
-    ' * Copyright 2018, <%= pkg.author.name %> - <%= pkg.author.email %>\n' +
+    ' * Copyright 2020, <%= pkg.author.name %> - <%= pkg.author.email %>\n' +
     ' * Released under the <%= pkg.license %> license.\n' +
     '*/\n\n';
 

@@ -1,5 +1,4 @@
 (function (AppCache) {
-
   var appCacheProto = AppCache.prototype;
 
   //symbol string:
@@ -12,7 +11,6 @@
       files: {}
     });
   };
-
 
   appCacheProto.syncManifest = function (inFiles) {
     var files = this._manifest.files;
@@ -49,5 +47,4 @@
   appCacheProto.setManifest = function (inValue) {
     this.setStore(MANIFEST, inValue);
   };
-
-}(AppCache));
+})(AppCache);
