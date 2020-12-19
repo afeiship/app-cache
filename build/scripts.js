@@ -2,13 +2,14 @@
 
   'use strict';
 
-  var gulp = require('gulp');
-  var $ = require('gulp-load-plugins')({
-    pattern: ['gulp-*', 'gulp.*', 'del']
+  const gulp = require('gulp');
+  const saveLicense = require('uglify-save-license');
+  const $ = require('gulp-load-plugins')({
+    pattern: ['gulp-*', 'gulp.*', 'del', '@jswork/gulp-*']
   });
 
-  var scriptFiles = [
-    'src/index.js',
+  const scriptFiles = [
+    'src/core.js',
     'src/load-from-xhr.js',
     'src/load-from-cache.js',
     'src/load-text.js',
@@ -19,30 +20,18 @@
   ];
 
 
-  var pkg = require('../package.json');
-  var comment = '/*\n' +
-    ' * <%= pkg.name %> <%= pkg.version %>\n' +
-    ' * <%= pkg.description %>\n' +
-    ' * <%= pkg.homepage %>\n' +
-    ' *\n' +
-    ' * Copyright 2020, <%= pkg.author.name %> - <%= pkg.author.email %>\n' +
-    ' * Released under the <%= pkg.license %> license.\n' +
-    '*/\n\n';
-
-
   gulp.task('scripts', function () {
-    return gulp.src(scriptFiles)
-      .pipe($.concat('app-cache.js'))
-      .pipe($.banner(comment, {pkg: pkg}))
+    return gulp
+      .src(scriptFiles)
+      .pipe($.concat('index.js'))
+      .pipe($.jswork.pkgHeader())
       .pipe(gulp.dest('dist'))
-      .pipe($.size({title: '[ default size ]:'}))
-      .pipe($.uglify())
-      .pipe($.rename({
-        extname: '.min.js'
-      }))
+      .pipe($.size({ title: '[ default size ]:' }))
+      .pipe($.uglify({ output: { comments: saveLicense } }))
+      .pipe($.rename({ extname: '.min.js' }))
       .pipe(gulp.dest('dist'))
-      .pipe(gulp.dest('test/dist'))
-      .pipe($.size({title: '[ minimize size ]:'}));
+      .pipe(gulp.dest('__tests__/dist'))
+      .pipe($.size({ title: '[ minimize size ]:' }));
   });
 
 }());

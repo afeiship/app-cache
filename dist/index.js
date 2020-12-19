@@ -1,11 +1,11 @@
-/*
- * @jswork/app-cache 1.0.0
- * An app scripts cache solution based on localStorage.
- * https://github.com/afeiship/app-cache
- *
- * Copyright 2020, afei - 1290657123@qq.com
- * Released under the MIT license.
-*/
+/*!
+ * name: @jswork/app-cache
+ * description: An app scripts cache solution based on localStorage.
+ * homepage: https://github.com/afeiship/app-cache
+ * version: 1.0.0
+ * date: 2020-12-19 16:20:49
+ * license: MIT
+ */
 
 (function () {
 
