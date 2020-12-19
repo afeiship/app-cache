@@ -2,8 +2,8 @@
  * name: @jswork/app-cache
  * description: An app scripts cache solution based on localStorage.
  * homepage: https://github.com/afeiship/app-cache
- * version: 1.0.0
- * date: 2020-12-19 16:20:49
+ * version: 1.0.2
+ * date: 2020-12-19 16:41:46
  * license: MIT
  */
 

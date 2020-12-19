@@ -1,6 +1,6 @@
 {
   "name": "@jswork/app-cache",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An app scripts cache solution based on localStorage.",
   "homepage": "https://github.com/afeiship/app-cache",
   "author": {
@@ -38,5 +38,16 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "keywords": [
+    "application",
+    "cache",
+    "localstorage",
+    "basket",
+    "load",
+    "css",
+    "styles",
+    "scripts",
+    "manifest"
+  ]
 }
