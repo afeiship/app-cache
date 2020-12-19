@@ -35,17 +35,17 @@ AppCache.load([
 ```
 
 ## license
-Code released under [the MIT license](https://github.com/afeiship/boilerplate-cli/blob/master/LICENSE.txt).
+Code released under [the MIT license](https://github.com/afeiship/app-cache/blob/master/LICENSE.txt).
 
-[version-image]: https://img.shields.io/npm/v/@boilerplate-scope/boilerplate-cli
-[version-url]: https://npmjs.org/package/@boilerplate-scope/boilerplate-cli
+[version-image]: https://img.shields.io/npm/v/@jswork/app-cache
+[version-url]: https://npmjs.org/package/@jswork/app-cache
 
-[license-image]: https://img.shields.io/npm/l/@boilerplate-scope/boilerplate-cli
-[license-url]: https://github.com/afeiship/boilerplate-cli/blob/master/LICENSE.txt
+[license-image]: https://img.shields.io/npm/l/@jswork/app-cache
+[license-url]: https://github.com/afeiship/app-cache/blob/master/LICENSE.txt
 
-[size-image]: https://img.shields.io/bundlephobia/minzip/@boilerplate-scope/boilerplate-cli
-[size-url]: https://github.com/afeiship/boilerplate-cli/blob/master/dist/boilerplate-cli.min.js
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/app-cache
+[size-url]: https://github.com/afeiship/app-cache/blob/master/dist/app-cache.min.js
 
-[download-image]: https://img.shields.io/npm/dm/@boilerplate-scope/boilerplate-cli
-[download-url]: https://www.npmjs.com/package/@boilerplate-scope/boilerplate-cli
+[download-image]: https://img.shields.io/npm/dm/@jswork/app-cache
+[download-url]: https://www.npmjs.com/package/@jswork/app-cache
 
